@@ -361,8 +361,8 @@ class ComposerStaticInitce0aa86fc403d28311473ebb853f80a0
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -593,6 +593,7 @@ class ComposerStaticInitce0aa86fc403d28311473ebb853f80a0
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
         'App\\Http\\Controllers\\SiteController' => __DIR__ . '/../..' . '/app/Http/Controllers/SiteController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\AdminRequirePassword' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminRequirePassword.php',
@@ -608,6 +609,7 @@ class ComposerStaticInitce0aa86fc403d28311473ebb853f80a0
         'App\\Http\\Requests\\Admin\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/Auth/LoginRequest.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
+        'App\\Models\\Post' => __DIR__ . '/../..' . '/app/Models/Post.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Notifications\\Admin\\ResetPassword' => __DIR__ . '/../..' . '/app/Notifications/Admin/ResetPassword.php',
         'App\\Notifications\\Admin\\VerifyEmail' => __DIR__ . '/../..' . '/app/Notifications/Admin/VerifyEmail.php',

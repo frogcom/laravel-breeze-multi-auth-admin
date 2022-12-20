@@ -39,7 +39,16 @@ Route::prefix('admin')->group(static function () {
         Route::post('logout', [\App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class, 'destroy'])->name('admin.logout');
         // General routes
         Route::get('/', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.index');
+
+
+        Route::get('/posts', [\App\Http\Controllers\Admin\AdminController::class, 'posts'])->name('admin.posts');
+        Route::get('/posts/create', [\App\Http\Controllers\Admin\AdminController::class, 'create'])->name('admin.create');
+        Route::post('/posts/create', [\App\Http\Controllers\Admin\AdminController::class, 'store'])->name('admin.create');
+        Route::get('/posts/{post}/edit', [\App\Http\Controllers\Admin\AdminController::class, 'edit'])->name('admin.edit');
+        Route::delete('/posts/{post}', [\App\Http\Controllers\Admin\AdminController::class, 'destroy'])->name('admin.posts.post');
+
+
+
         Route::get('profile', [\App\Http\Controllers\Admin\HomeController::class, 'profile'])->middleware('password.confirm.admin')->name('admin.profile');
     });
 });
-

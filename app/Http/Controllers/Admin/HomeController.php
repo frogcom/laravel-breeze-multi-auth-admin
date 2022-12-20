@@ -12,6 +12,11 @@ class HomeController extends Controller
         return view('admin.index');
     }
 
+    public function posts()
+    {
+        return view('admin.posts');
+    }
+
     public function profile()
     {
         return view('admin.profile');
