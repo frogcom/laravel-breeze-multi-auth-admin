@@ -71,11 +71,22 @@ $title = App\Http\Controllers\AdminController::returnTitle();
                     </div>
 
                     <!-- Search -->
+                    <!-- Search -->
                     <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl px-3 py-2">
-                        <form method="GET" action="#">
-                            <input type="text" name="search" placeholder="Find something"
-                                class="bg-transparent placeholder-black font-semibold text-sm">
+                        <form method="GET" action="{{ route('search') }}" class="flex">
+                            <input type="text" name="value"
+                                placeholder="Find something"class="bg-transparent font-semibold text-sm focus:outline-none"
+                                value="@if (strlen(request()->get('value')) > 0) {{ request()->get('value') }} @endif" />
+                            <select id="category" name="category"
+                                class="rounded-xl text-sm focus:outline-none bg-transparent cursor-pointer">
+                                <option value="everything" @if (request()->get('category') == 'everything' || request()->get('category') == '') selected @endif>Everything
+                                </option>
+                                <option value="title" @if (request()->get('category') == 'title') selected @endif>Title</option>
+                                <option value="author" @if (request()->get('category') == 'author') selected @endif>Author</option>
+                                <option value="body" @if (request()->get('category') == 'body') selected @endif>Body</option>
+                            </select>
                         </form>
+                        {{-- <span class="text-red-700 text-xs">The value is required for searching</span> --}}
                     </div>
                 </div>
             </header>

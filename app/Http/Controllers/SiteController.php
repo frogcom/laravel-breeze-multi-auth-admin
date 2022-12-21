@@ -10,7 +10,6 @@ class SiteController extends Controller
 
     public function index()
     {
-        // dd(auth()->user());
         return view('home', [
             'posts' => Post::all()
         ]);

@@ -20,6 +20,7 @@ Route::get('/', [\App\Http\Controllers\SiteController::class, 'index'])
 require __DIR__ . '/auth.php';
 
 Route::get('posts/{post:slug}', [\App\Http\Controllers\PostController::class, 'show']);
+Route::get('/search', [\App\Http\Controllers\PostController::class, 'search'])->name('search');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {

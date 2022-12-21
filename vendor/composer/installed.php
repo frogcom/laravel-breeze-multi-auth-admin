@@ -3,7 +3,7 @@
         'name' => 'rubensrocha/laravel-breeze-multi-auth-admin',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '86a9b08eb741cd5b5cb9e3e75ae300783224c50c',
+        'reference' => 'd38fe2bb194f5e0b0298b7661c1361128e8262a5',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -526,6 +526,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'mailchimp/marketing' => array(
+            'pretty_version' => '3.0.80',
+            'version' => '3.0.80.0',
+            'reference' => 'c1a38f7248d8de7de412418fed8dae759b9e4b97',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mailchimp/marketing',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'maximebf/debugbar' => array(
             'pretty_version' => 'v1.18.1',
             'version' => '1.18.1.0',
@@ -881,7 +890,7 @@
         'rubensrocha/laravel-breeze-multi-auth-admin' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '86a9b08eb741cd5b5cb9e3e75ae300783224c50c',
+            'reference' => 'd38fe2bb194f5e0b0298b7661c1361128e8262a5',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
