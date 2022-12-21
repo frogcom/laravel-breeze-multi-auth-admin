@@ -57,22 +57,22 @@ class PostController
 
       $names = ['title', 'slug', 'excerpt', 'body'];
     } else if ($dropdownValue == "title") {
-      $names = ['id'];
+      $names = ['title'];
     } else if ($dropdownValue == "author") {
       $names = ['slug'];
     } else if ($dropdownValue == "body") {
       $names = ['excerpt'];
     }
-
+    // dd($inputValue);
     $query = Post::where($names[0], 'LIKE', '%' . $inputValue . '%');
     for ($i = 1; $i < (count($names) - 1); $i++) {
       $query->orWhere($names[$i], 'LIKE', '%' . $inputValue . '%');
     }
-    // dd($query);
+
     $blogsNew = $query->get();
+    // dd($blogsNew);
 
-
-    return view('posts.post', [
+    return view('home', [
       'posts' => $blogsNew
     ]);
   }
