@@ -590,6 +590,7 @@ class ComposerStaticInitce0aa86fc403d28311473ebb853f80a0
         'App\\Http\\Controllers\\Admin\\Auth\\PasswordResetLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Auth/PasswordResetLinkController.php',
         'App\\Http\\Controllers\\Admin\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Admin\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/HomeController.php',
+        'App\\Http\\Controllers\\Admin\\Settings' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Settings.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
         'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',

@@ -53,4 +53,17 @@ class AdminController extends Controller
 
         return back()->with('succes', 'Post Deleted!');
     }
+
+    public function editSettings()
+    {
+        return view('admin.settings');
+    }
+
+    public function updateSettings()
+    {
+        $singleton = Settings::getInstance();
+        $singleton->setData();
+
+        return redirect('/admin/settings');
+    }
 }
