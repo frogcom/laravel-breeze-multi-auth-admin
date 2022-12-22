@@ -44,6 +44,7 @@ Route::prefix('admin')->group(static function () {
         Route::get('/posts', [\App\Http\Controllers\Admin\AdminController::class, 'posts'])->name('admin.posts');
         Route::get('/posts/create', [\App\Http\Controllers\Admin\AdminController::class, 'create'])->name('admin.create');
         Route::post('/posts/create', [\App\Http\Controllers\Admin\AdminController::class, 'store'])->name('admin.create');
+        Route::patch('/posts/{post}',  [\App\Http\Controllers\Admin\AdminController::class, 'update'])->name('admin.posts.post');
         Route::get('/posts/{post}/edit', [\App\Http\Controllers\Admin\AdminController::class, 'edit'])->name('admin.edit');
         Route::delete('/posts/{post}', [\App\Http\Controllers\Admin\AdminController::class, 'destroy'])->name('admin.posts.post');
 

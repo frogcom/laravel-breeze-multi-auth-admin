@@ -41,10 +41,38 @@ class AdminController extends Controller
 
         return redirect('/');
     }
-
-    public function edit()
+    public function edit($id)
     {
-        return view('admin.edit-post');
+        $post = Post::findOrFail($id);
+
+        return view('admin.edit-post', compact('post'));
+    }
+
+    public function update($id)
+    {
+
+
+
+        // // request()->validate([
+        //     'title' => 'required',
+        //     'slug' => ['required', Rule::unique('posts', 'slug')],
+        //     'excerpt' => 'required',
+        //     'body' => 'required',
+        // ]);
+
+        // dd(Post::find($id));
+        Post::find($id)->update([
+            'title' => request('title'),
+            'slug' => request('slug'),
+            'excerpt' =>  request('excerpt'),
+            'body' => request('body'),
+
+
+        ]);
+
+
+
+        return back()->with('succes', 'Updated');
     }
 
     public function destroy(Post $post)
@@ -53,6 +81,9 @@ class AdminController extends Controller
 
         return back()->with('succes', 'Post Deleted!');
     }
+
+
+
 
     public function editSettings()
     {
