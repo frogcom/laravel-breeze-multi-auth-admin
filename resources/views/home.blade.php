@@ -21,11 +21,11 @@ $m_Data = $m_Singleton->getData();
                     <?= $m_Data[2] ?>   
                 </h1>
 
-                <h2 class="inline-flex mt-2"><?= $m_Data[3] ?> <img src="/assets/img/lary-head.svg"
+                <h2 class="inline-flex mt-2"><?= $m_Data[4] ?> <img src="/assets/img/lary-head.svg"
                         alt="Head of Lary the mascot"></h2>
 
                 <p class="text-sm mt-14">
-                    <?= $m_Data[4] ?>
+                    <?= $m_Data[3] ?>
                 </p>
 
                 <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8">
