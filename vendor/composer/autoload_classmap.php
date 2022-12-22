@@ -17,6 +17,7 @@ return array(
     'App\\Http\\Controllers\\Admin\\Auth\\PasswordResetLinkController' => $baseDir . '/app/Http/Controllers/Admin/Auth/PasswordResetLinkController.php',
     'App\\Http\\Controllers\\Admin\\Auth\\VerifyEmailController' => $baseDir . '/app/Http/Controllers/Admin/Auth/VerifyEmailController.php',
     'App\\Http\\Controllers\\Admin\\HomeController' => $baseDir . '/app/Http/Controllers/Admin/HomeController.php',
+    'App\\Http\\Controllers\\Admin\\Settings' => $baseDir . '/app/Http/Controllers/Admin/Settings.php',
     'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => $baseDir . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
     'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => $baseDir . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
