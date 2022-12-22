@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsletterController;
+use App\Models\Post;
+use App\Services\Newsletter;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 
 
 /*
@@ -22,6 +27,21 @@ require __DIR__ . '/auth.php';
 Route::get('posts/{post:slug}', [\App\Http\Controllers\PostController::class, 'show']);
 Route::get('/search', [\App\Http\Controllers\PostController::class, 'search'])->name('search');
 
+
+
+Route::get('ping', function () {
+    $mailchimp = new \MailchimpMarketing\ApiClient();
+
+
+    $mailchimp->setConfig([
+        'apiKey' => config('services.mailchimp.key'),
+        'server' => ''
+
+    ]);
+    $response = $mailchimp->lists->getAllLists();
+
+    ddd($response);
+});
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return view('dashboard');
