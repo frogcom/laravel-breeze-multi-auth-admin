@@ -17,8 +17,13 @@
                     </x-nav-link>
                     <x-nav-link :href="route('admin.posts')" :active="request()->routeIs('admin.posts')">
                         {{ __('Posts') }}
-                    </x-nav-link><x-nav-link :href="route('admin.settings')" :active="request()->routeIs('admin.settings')">
+                    </x-nav-link>
+                    <x-nav-link :href="route('admin.settings')" :active="request()->routeIs('admin.settings')">
                         {{ __('Settings') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('admin.users.users')" :active="request()->routeIs('admin.users.users')">
+                        {{ __('users') }}
                     </x-nav-link>
                 </div>
             </div>

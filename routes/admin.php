@@ -49,7 +49,12 @@ Route::prefix('admin')->group(static function () {
         Route::delete('/posts/{post}', [\App\Http\Controllers\Admin\AdminController::class, 'destroy'])->name('admin.posts.post');
 
         Route::get('/settings', [\App\Http\Controllers\Admin\AdminController::class, 'editSettings'])->name('admin.settings');
-        Route::post('/update', 'App\Http\Controllers\Admin\AdminController@updateSettings');
+        Route::post('/update', 'App\Http\Controllers\Admin\AdminController@updateSettings')->name('admin.update');
+
+        Route::get('/users', [\App\Http\Controllers\Admin\UsersController::class, 'users'])->name('admin.users.users');
+
+
+
 
         Route::get('profile', [\App\Http\Controllers\Admin\HomeController::class, 'profile'])->middleware('password.confirm.admin')->name('admin.profile');
     });

@@ -10,16 +10,11 @@ use Illuminate\Validation\Rule;
 
 class AdminController extends Controller
 {
-    public function index()
-    {
-        return view('admin.posts');
-    }
 
     public function posts()
     {
         return view('admin.posts', [
-            'posts' => Post::all()
-                ->sortByDesc('updated_at')
+            'posts' => Post::query()->paginate(10)
         ]);
     }
 
@@ -39,7 +34,7 @@ class AdminController extends Controller
 
         Post::create($attributes);
 
-        return redirect('/');
+        return redirect('/admin/posts');
     }
     public function edit($id)
     {
@@ -51,16 +46,6 @@ class AdminController extends Controller
     public function update($id)
     {
 
-
-
-        // // request()->validate([
-        //     'title' => 'required',
-        //     'slug' => ['required', Rule::unique('posts', 'slug')],
-        //     'excerpt' => 'required',
-        //     'body' => 'required',
-        // ]);
-
-        // dd(Post::find($id));
         Post::find($id)->update([
             'title' => request('title'),
             'slug' => request('slug'),
@@ -69,8 +54,6 @@ class AdminController extends Controller
 
 
         ]);
-
-
 
         return back()->with('succes', 'Updated');
     }

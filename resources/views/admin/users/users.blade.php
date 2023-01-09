@@ -25,10 +25,13 @@
                                                     Id
                                                 </th>
                                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
-                                                    Title
+                                                    user name
                                                 </th>
                                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
-                                                    Updated At
+                                                    email
+                                                </th>
+                                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                                                    created at
                                                 </th>
                                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
                                                     Edit
@@ -39,29 +42,29 @@
                                             </tr>
                                         </thead class="border-b">
                                         <tbody>
-                                            @foreach ($posts as $post)
+                                            @foreach ($users as $user)
                                                 <tr class="bg-white border-b">
                                                     <td
                                                         class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                                        {{ $post->id }}</td>
+                                                        {{ $user->id }}</td>
                                                     <td
                                                         class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <a href="/posts/{{ $post->slug }}">
-                                                            {{ $post->title }}
-                                                        </a>
+
+                                                        {{ $user->email }}
+
                                                     </td>
                                                     <td
                                                         class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        {{ $post->updated_at }}
+                                                        {{ $user->created_at }}
                                                     </td>
                                                     <td
                                                         class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <a href="posts/{{ $post->id }}/edit"
+                                                        <a href="posts/{{ $user->id }}/edit"
                                                             class="text-blue-500 hover:text-blue-600">Edit</a>
                                                     </td>
                                                     <td
                                                         class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <form action="posts/{{ $post->id }}" method="post">
+                                                        <form action="posts/{{ $user->id }}" method="post">
                                                             @csrf
                                                             @method('DELETE')
 
@@ -70,8 +73,7 @@
                                                     </td>
                                                 </tr class="bg-white border-b">
                                             @endforeach
-
-                                            {{ $posts->links('pagination::tailwind') }}
+                                            {{ $users->links() }}
                                         </tbody>
                                     </table>
                                 </div>

@@ -18,7 +18,7 @@ $m_Data = $m_Singleton->getData();
 
             <header class="max-w-xl mx-auto mt-20 text-center">
                 <h1 class="text-4xl">
-                    <?= $m_Data[2] ?>   
+                    <?= $m_Data[2] ?>
                 </h1>
 
                 <h2 class="inline-flex mt-2"><?= $m_Data[4] ?> <img src="/assets/img/lary-head.svg"
@@ -91,12 +91,12 @@ $m_Data = $m_Singleton->getData();
                     </div>
                 </div>
             </header>
-
+            <div class="test"></div>
             <main class="max-w-6xl mx-auto mt-6 lg:mt-20 space-y-6">
                 @foreach ($posts as $post)
                     <article
                         class="transition-colors duration-300 hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
-                        <div class="py-6 px-5 lg:flex">
+                        <div class="py-6 px-5 lg:flex ">
                             <div class="flex-1 lg:mr-8">
                                 <img src="/assets/img/illustration-1.png" alt="Blog Post illustration" class="rounded-xl">
                             </div>
@@ -147,6 +147,8 @@ $m_Data = $m_Singleton->getData();
                         </div>
                     </article>
                 @endforeach
+                {{ $posts->links('pagination::tailwind') }}
+
             </main>
 
             <footer class="bg-gray-100 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">

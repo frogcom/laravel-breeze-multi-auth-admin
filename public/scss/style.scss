@@ -1,0 +1,49 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article:nth-child(2) {
+    div {
+        flex-direction: column;
+
+    }
+
+    width: 50%;
+}
+
+article:nth-child(3) {
+    div {
+        flex-direction: column;
+
+    }
+
+    width: 50%;
+}
+
+article:nth-child(4) {
+    div {
+        flex-direction: column;
+
+    }
+
+    width: 33%;
+}
+
+article:nth-child(5) {
+    div {
+        flex-direction: column;
+
+    }
+
+    width: 33%;
+}
+
+article:nth-child(6) {
+    div {
+        flex-direction: column;
+
+    }
+
+    width: 33%;
+}
